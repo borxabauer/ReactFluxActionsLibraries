@@ -8,28 +8,27 @@ function App() {
 
   const [ articles, setArticles ] = useState([])
 
-
   const context = {
     states: {
       articles
     },
     actions: {
-      addArticle: (article)=>{
+      addArticle: function (article) {
         const oldArticles = [...articles]
         oldArticles.push(article)
         setArticles([...oldArticles])
       },
-      deleteArticle: (articleIdx)=>{
+      deleteArticle: function (articleIdx) {
         const oldArticles = [...articles]
         oldArticles.splice(articleIdx,1)
         setArticles([...oldArticles])
       },
-      updateArticle: (articleIdx, newarticle)=>{
+      updateArticle: function (articleIdx, newarticle) {
         const oldArticles = [...articles]
         oldArticles[articleIdx] = newarticle
         setArticles([...oldArticles])
       },
-      getArticle: (propertyName, value) => {
+      getArticle: function (propertyName, value) {
         const articleIndex = articles.findIndex(
           item => item[propertyName] === value
         )
