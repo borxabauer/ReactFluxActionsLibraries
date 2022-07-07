@@ -1,7 +1,8 @@
 import { useContext } from "react"
 
-import { myContext } from "../services/Context"
+import { myContext } from "../services/MyContextComponent"
 import AddUser from "../components/AddUser"
+import UserList from "../components/UsersList"
 
 function Users () {
 
@@ -9,19 +10,10 @@ function Users () {
 
     return (
         <>
-            <h2>Users view</h2>
+            <h2>Vista de usuarios</h2>
             <AddUser/>
             <h3>Users</h3>
-            <ul>
-                {
-                    states.users.length > 0 ?
-                        states.users.map(
-                            (user, index) => <li key={index}>{user}</li>
-                        )
-                    :
-                        <li>No existen usuarios.</li>
-                }
-            </ul>
+            <UserList users={states.users}/>
         </>
     )
 }

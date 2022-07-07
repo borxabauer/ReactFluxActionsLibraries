@@ -1,12 +1,11 @@
 import { useState, useContext } from "react"
 
-import { myContext } from "../services/Context"
+import { myContext } from "../services/MyContextComponent"
 
 function AddUser () {
 
-    const [newUser, setNewUser] = useState("")
-
     const { actions } = useContext(myContext)
+    const [newUser, setNewUser] = useState("")
 
     return (
         <>

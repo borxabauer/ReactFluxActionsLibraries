@@ -1,7 +1,8 @@
 import { useContext } from "react"
 
-import { myContext } from "../services/Context"
+import { myContext } from "../services/MyContextComponent"
 import AddArticles from "../components/AddArticles"
+import ArticlesList from "../components/AticlesList"
 
 function Articles () {
 
@@ -9,19 +10,10 @@ function Articles () {
 
     return (
         <>
-            <h2>Articles view</h2>
+            <h2>Vista de artículos</h2>
             <AddArticles/>
             <h3>Articles</h3>
-            <ul>
-                {
-                    states.articles.length > 0 ?
-                        states.articles.map(
-                            (article, index) => <li key={index}>{article}</li>
-                        )
-                    :
-                        <li>No existen artículos.</li>
-                }
-            </ul>
+            <ArticlesList articles={states.articles}/>
         </>
     )
 }

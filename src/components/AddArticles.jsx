@@ -1,12 +1,11 @@
 import { useState, useContext } from "react"
 
-import { myContext } from "../services/Context"
+import { myContext } from "../services/MyContextComponent"
 
 function AddArticle () {
 
-    const [newArticle, setNewArticle] = useState("")
-
     const { actions } = useContext(myContext)
+    const [newArticle, setNewArticle] = useState("")
 
     return (
         <>

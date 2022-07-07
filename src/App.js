@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import { MyContextComponent } from './services/Context'
-import Layout from './views/Layout'
+import { MyContextComponent } from './services/MyContextComponent'
+import Layout from './Layout'
 
 function App() {
 
