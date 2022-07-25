@@ -1,6 +1,6 @@
 import { useContext } from "react"
 
-import { myContext } from "../services/MyContextComponent"
+import { myContext } from "../context/MyContextComponent"
 import AddUser from "../components/AddUser"
 import UserList from "../components/UsersList"
 

@@ -1,6 +1,6 @@
 import { useState, useContext } from "react"
 
-import { myContext } from "../services/MyContextComponent"
+import { myContext } from "../context/MyContextComponent"
 
 function AddArticle () {
 

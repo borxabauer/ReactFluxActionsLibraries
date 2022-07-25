@@ -1,6 +1,6 @@
 import { useContext } from "react"
 
-import { myContext } from "../services/MyContextComponent"
+import { myContext } from "../context/MyContextComponent"
 import AddSales from "../components/AddSales"
 import SalesList from "../components/SalesList"
 

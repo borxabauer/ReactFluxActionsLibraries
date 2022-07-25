@@ -1,6 +1,6 @@
 import { useContext } from "react"
 
-import { myContext } from "../services/MyContextComponent"
+import { myContext } from "../context/MyContextComponent"
 
 function SalesList ({sales}) {
 
@@ -12,7 +12,9 @@ function SalesList ({sales}) {
                 sales.length > 0 ?
                     <table>
                         <thead>
-                            <th>Usuario</th><th>Artículo</th>
+                            <tr>
+                                <th>Usuario</th><th>Artículo</th>
+                            </tr>
                         </thead>
                         <tbody>
                             {sales.map(

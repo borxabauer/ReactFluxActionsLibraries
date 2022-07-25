@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { Route, Routes, Link } from "react-router-dom"
 
-import { myContext } from "./services/MyContextComponent"
+import { myContext } from "./context/MyContextComponent"
 
 import Home from "./views/Home"
 import Users from "./views/Users"
@@ -19,10 +19,12 @@ function Layout () {
 
             <header>
                 <nav>
-                    <ul><Link to={"/"}>Inicio</Link></ul>
-                    <ul><Link to={"/users/"}>Usuarios</Link></ul>
-                    <ul><Link to={"/articles/"}>Artículos</Link></ul>
-                    <ul><Link to={"/sales/"}>Ventas</Link></ul>
+                    <ul>
+                        <li><Link to={"/"}>Inicio</Link></li>
+                        <li><Link to={"/users/"}>Usuarios</Link></li>
+                        <li><Link to={"/articles/"}>Artículos</Link></li>
+                        <li><Link to={"/sales/"}>Ventas</Link></li>
+                    </ul>
                 </nav>
             </header>
 
@@ -38,7 +40,7 @@ function Layout () {
             <footer>
                 <hr/>
                 <h3>Contadores</h3>
-                <StatesCounter states={{Usuarios: states.users, Artículos: states.articles}}/>
+                <StatesCounter states={{Usuarios: states.users, Artículos: states.articles, Ventas: states.sales}}/>
             </footer>
         </>
     )

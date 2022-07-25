@@ -4,7 +4,9 @@ function StatesCounter ({states}) {
 
     for (let item in states) {
         counters.push(
-            <p>{item}: {states[item].length}</p>
+            <p key={item}>
+                {item}: {states[item].length}
+            </p>
         )
     }
 
